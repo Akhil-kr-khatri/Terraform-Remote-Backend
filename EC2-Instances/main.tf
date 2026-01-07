@@ -4,6 +4,8 @@ resource "aws_instance" "ec2" {
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
   vpc_security_group_ids = [var.security_group_id]
+  associate_public_ip_address = true
+  user_data = file("./startUpFile.sh")
   
 
   tags = {
@@ -11,6 +13,11 @@ resource "aws_instance" "ec2" {
   }
 }
 
+
 output "instance_ids" {
+  value = aws_instance.ec2[*].id
+}
+
+output "public_ips" {
   value = aws_instance.ec2[*].public_ip
 }

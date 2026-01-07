@@ -8,11 +8,11 @@ terraform.tfstate.backup
 *.tfstate
 *.tfstate.backup
 
+
 # Terraform dependency lock file (optional to commit; ignored here)
 .terraform.lock.hcl
+.terraform.tfstate.lock.info
 
-# Shell scripts with secrets
-startUpFile.sh
 
 # Editor / OS files
 .vscode/
