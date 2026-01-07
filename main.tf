@@ -1,4 +1,12 @@
-
+terraform {
+  backend "s3" {
+    bucket         = "terraform-remote-state-bucket-terraform.tfstate"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-state-lock"
+    
+  }
+}
 module "Remote-Backend" {
   source = "./Remote-Backend"
 }
