@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "remote_backend" {
-  bucket = "terraform-remote-state-bucket-use1-12345"
+  bucket = "terraform-remote-state-bucket-terraform.tfstate"
 
   tags = {
-    Name = "remote-s3-storage-for-terraform-tfstate-file"
+    Name = "remote-s3-storage"
   }
 }
