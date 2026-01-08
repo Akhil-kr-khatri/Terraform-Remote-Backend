@@ -53,11 +53,11 @@ cloud-resources/
 |
 ├── VPC/
 │   ├── main.tf                 # VPC, Subnet, IGW, Route Table, Security Group
-│   ├── variables.tf
+│   └── variables.tf
 │
 ├── EC2-Instances/
 │   ├── main.tf                 # EC2 instances with user_data
-│   ├── variables.tf
+│   └── variables.tf
 │
 ├── startUpFile.sh
 |
